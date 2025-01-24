@@ -20,7 +20,7 @@ const Home = () => {
       <header className="home-header">
         <div className="home-logo">BilimOl.uz</div>
         <div className="home-nav">
-          <button className="home-button">Kirish</button>
+          <button className="home-button"><a href="/Frontend">Kirish</a></button>
         </div>
       </header>
 
