@@ -1,0 +1,121 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .header {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+    color: #007BFF;
+    text-transform: uppercase;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .video-player {
+    width: 100%;
+    height: 550px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .video-description {
+    color: #333;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: #fffff4;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .video-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .video-card {
+    cursor: pointer;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #007BFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .video-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .video-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+  }
+  
+  .video-card span {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .custom-button {
+    background-color: #1e90ff;
+    color: white; 
+    border: none; 
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px; 
+    font-weight: bold;
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .custom-button:hover {
+    background-color: #0056b3; 
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+  }
+  
+  @media (min-width: 768px) {
+    .content {
+      flex-direction: row;
+    }
+  
+    .video-section {
+      flex: 3;
+    }
+  
+    .video-list {
+      flex: 1;
+      flex-direction: column;
+      height: 450px;
+      overflow-y: auto;
+    }
+  }
+  

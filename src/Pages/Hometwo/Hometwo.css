@@ -1,0 +1,152 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f4f7; /* Yorqin fon rangi */
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(131, 124, 124, 0.1);
+  border-radius: 8px;
+}
+
+.home-logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #30336b;
+}
+
+.home-nav .Logout-button {
+  background-color: #ff7979;
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.home-nav .Logout-button:hover {
+  background-color: #eb4d4b;
+}
+
+/* Layout */
+.cardflex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Menu Styles */
+/* Agar Menu komponenti mavjud bo'lsa, uning o'ziga xos uslublari bo'lishi mumkin */
+
+/* Courses Section */
+.fullcards {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.fullcards h1 {
+  font-size: 36px;
+  color: #30336b;
+  margin-bottom: 30px;
+}
+
+/* Course Cards */
+.fullcardss {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  color: #30336b;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+  border: 1px solid #e0e0e0;
+}
+
+.course-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.course-card i {
+  font-size: 50px;
+  color: #ff7979;
+  margin-bottom: 20px;
+  animation: bounce 1.5s infinite; /* Animatsiya */
+}
+
+.course-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #30336b;
+}
+
+.course-card p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.course-card .enroll-button {
+  background-color: #ff7979;
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.course-card .enroll-button:hover {
+  background-color: #eb4d4b;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-15px);
+  }
+  60% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cardflex {
+      flex-direction: column;
+  }
+
+  .fullcards {
+      margin-left: 0;
+  }
+}

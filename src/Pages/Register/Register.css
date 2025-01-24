@@ -1,0 +1,122 @@
+/* Register sahifasining asosiy konteyneri */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Ro'yxatdan o'tish qutisi */
+  .register-box {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Sarlavha */
+  .register-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Tavsif matni */
+  .register-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Google hisob orqali tugma */
+  .register-google-button {
+    background-color: #db4437;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+  }
+
+  .register-github-button {
+    background-color: #000521;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .register-google-button:hover {
+    background-color: #c33d2d;
+  }
+  
+  /* Bo'luvchi (divider) */
+  .divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #999;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+  }
+  
+  .divider span {
+    margin: 0 10px;
+  }
+  
+  /* Form va inputlar */
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .register-input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .register-input:focus {
+    outline: none;
+    border-color: #2575fc;
+    box-shadow: 0 0 4px rgba(37, 117, 252, 0.5);
+  }
+  
+  /* Ro'yxatdan o'tish tugmasi */
+  .register-submit-button {
+    background-color: #2575fc;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .register-submit-button:hover {
+    background-color: #1b5dbf;
+  }
+  
