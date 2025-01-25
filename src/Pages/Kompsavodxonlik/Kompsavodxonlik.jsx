@@ -1,29 +1,63 @@
-import React from 'react';
-import '../../Pages/Kompsavodxonlik/Kompsavodxonlik.css';
+import React, { useEffect, useState } from "react";
+import "../../Pages/Kompsavodxonlik/Kompsavodxonlik.css";
+import data from "../../../src/Data/kompsavodxonlik.json";
 
 const Kompsavodxonlik = () => {
+  const [datas, setdatas] = useState([]);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0); 
+
+  useEffect(() => {
+    const modifiedUrls = data.kompyutersavodxonlik.map((item) => ({
+      id: item.id,
+      url: item.url.slice(17), 
+    }));
+    setdatas(modifiedUrls);
+  }, []);
+
+  
+  const handleNextVideo = () => {
+    setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % datas.length);
+  };
+
+  const handleVideoClick = (index) => {
+    setCurrentVideoIndex(index);
+  };
+
   return (
     <div className="container">
-      <header className="header">Kompsavodxonlik</header>
+       <button className="custom-button">
+              <a href="/hometwo">Orqaga</a>
+            </button>
+      <header className="header">Kompyuter savodxonligi</header>
       <div className="content">
         <div className="video-section">
           <h1>Video darsliklar</h1>
-          <iframe
-            src="https://www.youtube.com/embed/gI3BaGP5cqU?si=eMrfvEBQXUWxYI6_"
-            className="video-player"
-            title="Video Player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          {datas.length > 0 && (
+            <iframe
+              src={`https://www.youtube.com/embed/${datas[currentVideoIndex].url}`}
+              className="video-player"
+              title={`Video Player ${datas[currentVideoIndex].id}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          )}
           <div className="video-description">
-            <h2>Video nomi tursin</h2>
-            <p>Description p shaklida.</p>
+            <button className="custom-button" onClick={handleNextVideo}>
+              Keyingi video
+            </button>
           </div>
         </div>
+
         <div className="video-list">
-          {Array.from({ length: 20 }).map((_, index) => (
-            <div className="video-card" key={index}>
-              <span>play video{index + 1}</span>
+          {datas.map((value, index) => (
+            <div
+              className="video-card"
+              key={value.id}
+              onClick={() => handleVideoClick(index)}
+            >
+              <span>
+                {value.id}-dars
+              </span>
             </div>
           ))}
         </div>

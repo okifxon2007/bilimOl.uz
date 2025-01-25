@@ -4,28 +4,30 @@ import data from "../../../src/Data/data.json";
 
 const Frontend = () => {
   const [datas, setdatas] = useState([]);
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0); // Hozirgi video uchun indeks
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0); 
 
   useEffect(() => {
     const modifiedUrls = data.dasturlash.map((item) => ({
       id: item.id,
-      url: item.url.slice(17), // 17-ta belgidan keyingi qismini olamiz
+      url: item.url.slice(17), 
     }));
     setdatas(modifiedUrls);
   }, []);
 
-  // Keyingi videoni ko'rsatish
+  
   const handleNextVideo = () => {
     setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % datas.length);
   };
 
-  // Bosilgan cardning id dagi videoni ko'rsatish
   const handleVideoClick = (index) => {
     setCurrentVideoIndex(index);
   };
 
   return (
     <div className="container">
+       <button className="custom-button">
+              <a href="/hometwo">Orqaga</a>
+            </button>
       <header className="header">Frontend</header>
       <div className="content">
         <div className="video-section">
